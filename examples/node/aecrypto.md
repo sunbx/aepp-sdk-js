@@ -90,7 +90,7 @@ transaction and turn it into an RLP-encoded tuple ready for mining
 ```js
 function signTx (tx, privKey) {
   if (!tx.match(/^tx_.+/)) {
-    throw Error('Not a valid transaction')
+    throw new Error('Not a valid transaction')
   }
 
   const binaryKey = (() => {
@@ -99,7 +99,7 @@ function signTx (tx, privKey) {
     } else if (privKey) {
       return Buffer.from(privKey, 'hex')
     } else {
-      throw Error('Must provide either [privkey] or [file]')
+      throw new Error('Must provide either [privkey] or [file]')
     }
   })()
 

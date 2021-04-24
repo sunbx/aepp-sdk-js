@@ -5,12 +5,12 @@ Memory Account module
 
 **Example**  
 ```js
-import MemoryAccount from '@aeternity/aepp-sdk/es/account/memory'
+import { MemoryAccount } from '@aeternity/aepp-sdk'
 ```
-<a id="exp_module_@aeternity/aepp-sdk/es/account/memory--MemoryAccount"></a>
+<a id="exp_module_@aeternity/aepp-sdk/es/account/memory--module.exports"></a>
 
-### MemoryAccount([options]) ⇒ `Account` ⏏
-In-memory `Account` factory
+### module.exports([options]) ⇒ `Account` ⏏
+In-memory account stamp
 
 **Kind**: Exported function  
 **rtype**: `Stamp`

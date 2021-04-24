@@ -5,7 +5,7 @@ Channel module
 
 **Example**  
 ```js
-import Channel from '@aeternity/aepp-sdk/es/channel/index'
+import { Channel } from '@aeternity/aepp-sdk'
 ```
 
 * [@aeternity/aepp-sdk/es/channel/index](#module_@aeternity/aepp-sdk/es/channel/index)

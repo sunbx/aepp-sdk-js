@@ -9,7 +9,7 @@ repository.
 
 **Example**  
 ```js
-import Oracle from '@aeternity/aepp-sdk/es/ae/oracle'
+import { Oracle } from '@aeternity/aepp-sdk'
 ```
 
 * [@aeternity/aepp-sdk/es/ae/oracle](#module_@aeternity/aepp-sdk/es/ae/oracle)

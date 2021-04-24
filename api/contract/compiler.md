@@ -7,7 +7,7 @@ This is the complement to [@aeternity/aepp-sdk/es/contract](#module_@aeternity/a
 
 **Example**  
 ```js
-import ContractCompilerAPI from '@aeternity/aepp-sdk/es/contract/compiler'
+import { ContractCompilerAPI } from '@aeternity/aepp-sdk'
 ```
 <a id="exp_module_@aeternity/aepp-sdk/es/contract/compiler--ContractCompilerAPI"></a>
 
