@@ -12,7 +12,6 @@ import ContractBase from '@aeternity/aepp-sdk/es/contract'
     * [ContractBase([options])](#exp_module_@aeternity/aepp-sdk/es/contract--ContractBase) ⇒ `Object` ⏏
         * *[.contractGetACI(source, [options])](#module_@aeternity/aepp-sdk/es/contract--ContractBase+contractGetACI) ⇒ `Object`*
         * *[.contractEncodeCallDataAPI(source, name, args, [options])](#module_@aeternity/aepp-sdk/es/contract--ContractBase+contractEncodeCallDataAPI) ⇒ `String`*
-        * *[.contractDecodeDataAPI(type, data)](#module_@aeternity/aepp-sdk/es/contract--ContractBase+contractDecodeDataAPI) ⇒ `String`*
         * *[.contractDecodeCallResultAPI(source, fn, callValue, callResult, [options])](#module_@aeternity/aepp-sdk/es/contract--ContractBase+contractDecodeCallResultAPI) ⇒ `String`*
         * *[.contractDecodeCallDataBySourceAPI(source, function, callData, [options])](#module_@aeternity/aepp-sdk/es/contract--ContractBase+contractDecodeCallDataBySourceAPI) ⇒ `String`*
         * *[.contractDecodeCallDataByCodeAPI(code, callData, backend)](#module_@aeternity/aepp-sdk/es/contract--ContractBase+contractDecodeCallDataByCodeAPI) ⇒ `String`*
@@ -52,7 +51,7 @@ Get contract ACI
 | source | `String` |  | Contract source code |
 | [options] | `Object` | <code>{}</code> | Options |
 | [options.filesystem] | `Object` |  | Contract external namespaces map |
-| [options.backend] | `Object` |  | Contract vm(default: aevm) |
+| [options.backend] | `Object` |  | Contract vm (default: fate) |
 
 <a id="module_@aeternity/aepp-sdk/es/contract--ContractBase+contractEncodeCallDataAPI"></a>
 
@@ -71,22 +70,7 @@ Encode contract data
 | args | `Array` |  | Function argument's |
 | [options] | `Object` | <code>{}</code> | Options |
 | [options.filesystem] | `Object` |  | Contract external namespaces map |
-| [options.backend] | `Object` |  | Contract vm(default: aevm) |
-
-<a id="module_@aeternity/aepp-sdk/es/contract--ContractBase+contractDecodeDataAPI"></a>
-
-#### *contractBase.contractDecodeDataAPI(type, data) ⇒ `String`*
-Decode data
-
-**Kind**: instance abstract method of [`ContractBase`](#exp_module_@aeternity/aepp-sdk/es/contract--ContractBase)  
-**Returns**: `String` - - Decoded contract call result  
-**Category**: async  
-**rtype**: `(type: String, data: String) => decodedResult: Promise[String]`
-
-| Param | Type | Description |
-| --- | --- | --- |
-| type | `String` | Contract call result type |
-| data | `String` | Encoded contract call result |
+| [options.backend] | `Object` |  | Contract vm (default: fate) |
 
 <a id="module_@aeternity/aepp-sdk/es/contract--ContractBase+contractDecodeCallResultAPI"></a>
 
@@ -106,7 +90,7 @@ Decode contract call result data
 | callResult | `String` |  | contract call result status('ok', 'revert', ...) |
 | [options] | `Object` | <code>{}</code> | Options |
 | [options.filesystem] | `Object` |  | Contract external namespaces map |
-| [options.backend] | `Object` |  | Contract vm(default: aevm) |
+| [options.backend] | `Object` |  | Contract vm (default: fate) |
 
 <a id="module_@aeternity/aepp-sdk/es/contract--ContractBase+contractDecodeCallDataBySourceAPI"></a>
 
@@ -125,7 +109,7 @@ Decode call data by source
 | callData | `String` |  | Encoded contract call data |
 | [options] | `Object` | <code>{}</code> | Options |
 | [options.filesystem] | `Object` |  | Contract external namespaces map |
-| [options.backend] | `Object` |  | Contract vm(default: aevm) |
+| [options.backend] | `Object` |  | Contract vm (default: fate) |
 
 <a id="module_@aeternity/aepp-sdk/es/contract--ContractBase+contractDecodeCallDataByCodeAPI"></a>
 
@@ -141,7 +125,7 @@ Decode call data by bytecode
 | --- | --- | --- |
 | code | `String` | contract byte code |
 | callData | `String` | Encoded contract call data |
-| backend | `String` | Contract vm(default: aevm) |
+| backend | `String` | Contract vm (default: fate) |
 
 <a id="module_@aeternity/aepp-sdk/es/contract--ContractBase+compileContractAPI"></a>
 
@@ -158,7 +142,7 @@ Compile contract
 | code | `String` |  | Contract source code |
 | [options] | `Object` | <code>{}</code> | Options |
 | [options.filesystem] | `Object` |  | Contract external namespaces map |
-| [options.backend] | `Object` |  | Contract vm(default: aevm) |
+| [options.backend] | `Object` |  | Contract vm (default: fate) |
 
 <a id="module_@aeternity/aepp-sdk/es/contract--ContractBase+setCompilerUrl"></a>
 

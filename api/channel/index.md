@@ -418,8 +418,8 @@ a deposit amount of tokens to the new contract.
 | options.code | `String` | Api encoded compiled AEVM byte code |
 | options.callData | `String` | Api encoded compiled AEVM call data for the code |
 | options.deposit | `Number` | Initial amount the owner of the contract commits to it |
-| options.vmVersion | `Number` | Version of the AEVM |
-| options.abiVersion | `Number` | Version of the ABI |
+| options.vmVersion | `Number` | Version of the Virtual Machine |
+| options.abiVersion | `Number` | Version of the Application Binary Interface |
 | sign | `function` | Function which verifies and signs create contract transaction |
 
 **Example**  
