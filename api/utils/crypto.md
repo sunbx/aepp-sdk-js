@@ -10,7 +10,6 @@ import { Crypto } from '@aeternity/aepp-sdk'
 
 * [@aeternity/aepp-sdk/es/utils/crypto](#module_@aeternity/aepp-sdk/es/utils/crypto)
     * _static_
-        * [.decode](#module_@aeternity/aepp-sdk/es/utils/crypto.decode) ⇒ `Array`
         * [.formatAddress(format, address)](#module_@aeternity/aepp-sdk/es/utils/crypto.formatAddress) ⇒ `String`
         * [.getAddressFromPriv(secret)](#module_@aeternity/aepp-sdk/es/utils/crypto.getAddressFromPriv) ⇒ `String`
         * [.isAddressValid(address, prefix)](#module_@aeternity/aepp-sdk/es/utils/crypto.isAddressValid) ⇒ `Boolean`
@@ -47,19 +46,6 @@ import { Crypto } from '@aeternity/aepp-sdk'
         * [.decryptData(secretKey, encryptedData)](#module_@aeternity/aepp-sdk/es/utils/crypto.decryptData) ⇒ `Buffer` \| `null`
     * _inner_
         * [~Transaction](#module_@aeternity/aepp-sdk/es/utils/crypto..Transaction) : `Array`
-
-<a id="module_@aeternity/aepp-sdk/es/utils/crypto.decode"></a>
-
-### @aeternity/aepp-sdk/es/utils/crypto.decode ⇒ `Array`
-RLP decode
-
-**Kind**: static constant of [`@aeternity/aepp-sdk/es/utils/crypto`](#module_@aeternity/aepp-sdk/es/utils/crypto)  
-**Returns**: `Array` - Array of Buffers containing the original message  
-**rtype**: `(data: Any) => Buffer[]`
-
-| Param | Type | Description |
-| --- | --- | --- |
-| data | `Buffer` \| `String` \| `Integer` \| `Array` | Data to decode |
 
 <a id="module_@aeternity/aepp-sdk/es/utils/crypto.formatAddress"></a>
 
