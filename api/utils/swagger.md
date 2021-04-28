@@ -5,7 +5,7 @@ Generator of Swagger client module
 
 <a id="exp_module_@aeternity/aepp-sdk/es/utils/swagger--module.exports"></a>
 
-### module.exports(specUrl, internalUrl) ⇒ `Object` ⏏
+### module.exports(specUrl, options) ⇒ `Object` ⏏
 Generator of Swagger client
 
 **Kind**: Exported function  
@@ -15,7 +15,10 @@ Generator of Swagger client
 | Param | Type | Description |
 | --- | --- | --- |
 | specUrl | `String` | Swagger specification URL on external node host |
-| internalUrl | `String` | Node internal URL |
+| options | `Object` |  |
+| [options.internalUrl] | `String` | Node internal URL |
+| [options.disableBigNumbers] | `Boolean` |  |
+| [options.keysOfValuesToIgnore] | `Boolean` | TODO: Convert keys according to Swagger definitions instead |
 
 **Example**  
 ```js

@@ -9,9 +9,9 @@ This is the complement to [@aeternity/aepp-sdk/es/contract](#module_@aeternity/a
 ```js
 import { ContractCompilerAPI } from '@aeternity/aepp-sdk'
 ```
-<a id="exp_module_@aeternity/aepp-sdk/es/contract/compiler--ContractCompilerAPI"></a>
+<a id="exp_module_@aeternity/aepp-sdk/es/contract/compiler--module.exports"></a>
 
-### ContractCompilerAPI([options]) ⇒ `Object` ⏏
+### module.exports([options]) ⇒ `Object` ⏏
 Contract Compiler Stamp
 
 This stamp include api call's related to contract compiler functionality.
