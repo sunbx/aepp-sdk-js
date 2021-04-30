@@ -16,6 +16,7 @@ Generator of Swagger client
 | --- | --- | --- |
 | specUrl | `String` | Swagger specification URL on external node host |
 | options | `Object` |  |
+| [options.spec] | `String` | Override OpenAPI definition |
 | [options.internalUrl] | `String` | Node internal URL |
 | [options.disableBigNumbers] | `Boolean` |  |
 | [options.keysOfValuesToIgnore] | `Boolean` | TODO: Convert keys according to Swagger definitions instead |
