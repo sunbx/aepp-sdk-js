@@ -5,7 +5,6 @@
  * @example import { NodePool } from '@aeternity/aepp-sdk'
  */
 import stampit from '@stamp/it'
-import { getterForCurrentNode, prepareNodeObject } from './helpers'
 import { getNetworkId } from '../node'
 
 /**
@@ -18,7 +17,7 @@ import { getNetworkId } from '../node'
  * @param {Array} [options.nodes] - Array with Node instances
  * @return {Object} NodePool instance
  */
-export const NodePool = stampit({
+export default stampit({
   init ({ nodes = [] } = {}) {
     this.pool = new Map()
     this.validateNodes(nodes)
@@ -34,7 +33,10 @@ export const NodePool = stampit({
       enumerable: true,
       configurable: false,
       get () {
-        return getterForCurrentNode(this.selectedNode)
+        if (!this.selectedNode || !this.selectedNode.instance) {
+          throw new Error('You can\'t use Node API. Node is not connected or not defined!')
+        }
+        return this.selectedNode.instance.api
       }
     },
     _isIrisNode: {
@@ -50,20 +52,28 @@ export const NodePool = stampit({
      * Add Node
      * @function
      * @alias module:@aeternity/aepp-sdk/es/node-pool
-     * @rtype (name: String, nodeInstance: Object, select: Boolean) => Void
+     * @rtype (name: String, nodeInstance: Object, select: Boolean) => void
      * @param {String} name - Node name
-     * @param {Object} nodeInstance - Node instance
+     * @param {Object} node - Node instance
      * @param {Boolean} select - Select this node as current
-     * @return {Void}
+     * @return {void}
      * @example
      * nodePool.addNode('testNode', awaitNode({ url, internalUrl }), true) // add and select new node with name 'testNode'
      */
-    addNode (name, nodeInstance, select = false) {
+    addNode (name, node, select = false) {
       if (this.pool.has(name)) throw new Error(`Node with name ${name} already exist`)
 
-      this.validateNodes([{ name, instance: nodeInstance }])
+      this.validateNodes([{ name, instance: node }])
 
-      this.pool.set(name, prepareNodeObject(name, nodeInstance))
+      this.pool.set(name, {
+        name,
+        instance: node,
+        url: node.url,
+        internalUrl: node.internalUrl,
+        networkId: node.nodeNetworkId,
+        version: node.version,
+        consensusProtocolVersion: node.consensusProtocolVersion
+      })
       if (select || !this.selectedNode) {
         this.selectNode(name)
       }
@@ -72,9 +82,9 @@ export const NodePool = stampit({
      * Select Node
      * @function
      * @alias module:@aeternity/aepp-sdk/es/node-pool
-     * @rtype (name: String) => Void
+     * @rtype (name: String) => void
      * @param {String} name - Node name
-     * @return {Void}
+     * @return {void}
      * @example
      * nodePool.selectNode('testNode')
      */
@@ -151,5 +161,3 @@ export const NodePool = stampit({
     selectedNode: {}
   }
 })
-
-export default NodePool
