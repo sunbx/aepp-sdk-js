@@ -27,7 +27,6 @@ import { TxBuilderHelper } from '@aeternity/aepp-sdk'
     * [exports.getMinimumNameFee(domain)](#exp_module_@aeternity/aepp-sdk/es/tx/builder/helpers--exports.getMinimumNameFee) ⇒ `String` ⏏
     * [exports.computeBidFee(domain, startFee, [increment])](#exp_module_@aeternity/aepp-sdk/es/tx/builder/helpers--exports.computeBidFee) ⇒ `String` ⏏
     * [exports.computeAuctionEndBlock(domain, claimHeight)](#exp_module_@aeternity/aepp-sdk/es/tx/builder/helpers--exports.computeAuctionEndBlock) ⇒ `String` ⏏
-    * [exports.getContractBackendFromTx({)](#exp_module_@aeternity/aepp-sdk/es/tx/builder/helpers--exports.getContractBackendFromTx) ⇒ `String` ⏏
     * [exports.isAuctionName(name)](#exp_module_@aeternity/aepp-sdk/es/tx/builder/helpers--exports.isAuctionName) ⇒ `Boolean` ⏏
 
 <a id="exp_module_@aeternity/aepp-sdk/es/tx/builder/helpers--exports.buildContractId"></a>
@@ -257,18 +256,6 @@ Compute auction end height
 | --- | --- | --- |
 | domain | `String` | the domain name to get the fee for |
 | claimHeight | `Number` \| `String` | Auction starting height |
-
-<a id="exp_module_@aeternity/aepp-sdk/es/tx/builder/helpers--exports.getContractBackendFromTx"></a>
-
-### exports.getContractBackendFromTx({) ⇒ `String` ⏏
-Get contract backend by abiVersion
-
-**Kind**: Exported function  
-**Returns**: `String` - Backend  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| { | `Object` | abiVersion } abiVersion Transaction abiVersion |
 
 <a id="exp_module_@aeternity/aepp-sdk/es/tx/builder/helpers--exports.isAuctionName"></a>
 

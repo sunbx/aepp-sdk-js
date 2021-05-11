@@ -79,7 +79,6 @@ Encode call data for contract call
 | args | `Array` |  | Argument's for call |
 | [options] | `Object` | <code>{}</code> | Options |
 | [options.filesystem] | `Object` | <code>{}</code> | Contract external namespaces map |
-| [options.backend] | `Object` | <code>&#x27;fate&#x27;</code> | Compiler backend |
 
 <a id="exp_module_@aeternity/aepp-sdk/es/ae/contract--contractDecodeData"></a>
 
@@ -201,7 +200,6 @@ Compile contract source code
 | source | `String` |  | Contract sourece code |
 | [options] | `Object` | <code>{}</code> | Transaction options (fee, ttl, gas, amount, deposit) |
 | [options.filesystem] | `Object` | <code>{}</code> | Contract external namespaces map* @return {Promise<Object>} Result object |
-| [options.backend] | `Object` | <code>&#x27;fate&#x27;</code> | Contract backend version (aevm|fate) |
 
 **Example**  
 ```js
