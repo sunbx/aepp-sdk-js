@@ -19,7 +19,7 @@ Generator of Swagger client
 | [options.spec] | `String` | Override OpenAPI definition |
 | [options.internalUrl] | `String` | Node internal URL |
 | [options.disableBigNumbers] | `Boolean` |  |
-| [options.keysOfValuesToIgnore] | `Boolean` | TODO: Convert keys according to Swagger definitions instead |
+| [options.disableCaseConversion] | `Boolean` |  |
 
 **Example**  
 ```js
