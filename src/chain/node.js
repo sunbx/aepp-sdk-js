@@ -128,9 +128,7 @@ async function awaitHeight (height, { interval = 5000, attempts = 20 } = {}) {
  * @deprecated
  */
 async function topBlock () {
-  return this._isIrisNode
-    ? await this.api.getTopHeader()
-    : Object.values(await this.api.getTopBlock())[0]
+  return this.api.getTopHeader()
 }
 
 async function poll (th, { blocks = 10, interval = 5000, allowUnsynced = false } = {}) {

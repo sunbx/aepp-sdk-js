@@ -131,7 +131,7 @@ async function createMetaTx (rawTransaction, authData, authFnName, options = {})
   const { rlpEncoded: metaTxRlp } = buildTx(
     { ...params, fee: `${fee}`, ttl },
     TX_TYPE.gaMeta,
-    { vsn: this.getNodeInfo().consensusProtocolVersion === PROTOCOL_VERSIONS.IRIS ? 2 : 1 }
+    { vsn: 2 }
   )
   // Wrap in empty signed tx
   const { tx } = wrapInEmptySignedTx(metaTxRlp)
