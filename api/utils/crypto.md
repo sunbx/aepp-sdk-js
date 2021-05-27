@@ -15,7 +15,6 @@ import { Crypto } from '@aeternity/aepp-sdk'
         * [.isAddressValid(address, prefix)](#module_@aeternity/aepp-sdk/es/utils/crypto.isAddressValid) ⇒ `Boolean`
         * [.addressToHex(base58CheckAddress)](#module_@aeternity/aepp-sdk/es/utils/crypto.addressToHex) ⇒ `String`
         * [.addressFromDecimal(decimalAddress)](#module_@aeternity/aepp-sdk/es/utils/crypto.addressFromDecimal) ⇒ `String`
-        * [.hash(input)](#module_@aeternity/aepp-sdk/es/utils/crypto.hash) ⇒ `Buffer`
         * [.sha256hash(input)](#module_@aeternity/aepp-sdk/es/utils/crypto.sha256hash) ⇒ `String`
         * [.salt()](#module_@aeternity/aepp-sdk/es/utils/crypto.salt) ⇒ `Number`
         * [.encodeBase64Check(input)](#module_@aeternity/aepp-sdk/es/utils/crypto.encodeBase64Check) ⇒ `Buffer`
@@ -113,19 +112,6 @@ Parse decimal address and return base58Check encoded address with prefix 'ak'
 | Param | Type | Description |
 | --- | --- | --- |
 | decimalAddress | `String` | Address |
-
-<a id="module_@aeternity/aepp-sdk/es/utils/crypto.hash"></a>
-
-### @aeternity/aepp-sdk/es/utils/crypto.hash(input) ⇒ `Buffer`
-Calculate 256bits Blake2b hash of `input`
-
-**Kind**: static method of [`@aeternity/aepp-sdk/es/utils/crypto`](#module_@aeternity/aepp-sdk/es/utils/crypto)  
-**Returns**: `Buffer` - Hash  
-**rtype**: `(input: String) => hash: String`
-
-| Param | Type | Description |
-| --- | --- | --- |
-| input | `String` \| `Buffer` | Data to hash |
 
 <a id="module_@aeternity/aepp-sdk/es/utils/crypto.sha256hash"></a>
 
