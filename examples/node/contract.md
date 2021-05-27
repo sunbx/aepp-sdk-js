@@ -117,7 +117,7 @@
 contract Multiplier =
   record state = { factor: int }
   entrypoint init(f : int) : state = { factor = f }
-  entrypoint main(x : int) = x * state.factor
+  entrypoint multiplyBy(x : int) = x * state.factor
 `</span>
 <span class="hljs-keyword">const</span> ACCOUNT_KEYPAIR = {
   <span class="hljs-attr">publicKey</span>: <span class="hljs-string">&#x27;ak_2dATVcZ9KJU5a8hdsVtTv21pYiGWiPbmVcU1Pz72FFqpk9pSRR&#x27;</span>,
@@ -235,7 +235,7 @@ the amount of gas spend.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">const</span> call = <span class="hljs-keyword">await</span> deployed.call(<span class="hljs-string">&#x27;main&#x27;</span>, [<span class="hljs-string">&#x27;7&#x27;</span>])
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">const</span> call = <span class="hljs-keyword">await</span> deployed.call(<span class="hljs-string">&#x27;multiplyBy&#x27;</span>, [<span class="hljs-string">&#x27;7&#x27;</span>])
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Contract call transaction hash <span class="hljs-subst">${call.hash}</span>`</span>)</pre></div></div>
             
         </li>
